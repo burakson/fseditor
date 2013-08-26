@@ -1,0 +1,4 @@
+fseditor
+========
+
+jQuery Fullscreen Editor
