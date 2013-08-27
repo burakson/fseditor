@@ -1,0 +1,196 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f1f3;;
+  color: #3F3F3F;
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial;
+  font-size: 16px;
+}
+h1, h2, h3 {
+  margin: 0;
+}
+h1 {
+  letter-spacing: -1px;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+h2 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+h3 {
+  margin: 70px 0 10px;
+  font-size: 1.5em;
+}
+hr {
+  margin: 25px 0;
+  border:0;
+  border-bottom: 1px
+  solid #ccc;
+}
+pre {
+  display: inline;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 15px;
+  margin: 0 0 20px;
+  white-space: pre;
+  line-height: 24px;
+  background: #fff;
+  font-weight: 100;
+  font-family: Consolas, monaco, monospace;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+a {
+  color: #00acee;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+a:hover {
+  color: #0080A6;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.header {
+  padding: 10px 30px;
+  background: #56BBA1;
+  color: #fff;
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 10px 30px;
+  width: 960px;
+}
+section.wrapper {
+  margin-bottom: 80px; 
+  padding: 10px 30px;
+}
+
+.bar {
+  width: 100%;
+  padding: 3px;
+  text-align: right;
+  background-color: #34495E;
+}
+.bar.stick {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.bar a {
+  color: #fff;
+  text-decoration: none;
+}
+.bar a.github-link:hover {
+  color: #efefef;
+}
+.bar .socials {
+  float: left;
+}
+.bar .download-btn {
+  margin: 0 20px;
+  padding: 13px 25px;
+  background-color: #3498db;
+}
+.bar .download-btn:hover {
+  background-color: #5dade2;
+}
+.key-features {
+  float: right;
+  width: 450px;
+  margin: 65px 0 0 20px;
+  background: #627588;
+  color: #fff;
+}
+.key-features h3 {
+  margin: 20px 0 0 30px;
+}
+.key-features ul {
+  margin: 5px 10px 20px;
+}
+.example {
+  position:relative;
+  margin-bottom: 10px;
+}
+.tip {
+  position: absolute;
+  right: 12px;
+  top: -35px;
+  color: #34495E;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA4LzIzLzEzwufwWAAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAJxSURBVEiJtddPiFVlHMbxz2Q4aqKFOGRQOxftRCWQAjcyLly0jdDN/QktWoQuMgQl1FASJEEoF68ibsTNWKCDoJBoIUQRCCL4B3Mj/glE/DeCTIv3vTRzuXPnnHuPDxwO957nPd/3Pe95n/N7h1JKC7APF3EdtyPikdekyclJMJRSGsEfWIqhcjzEFZzB+Yi42jgYUkpz8Qm+wWq8U3wv8S+e4yROR8SlxsBtpZSG8Sn2YHmXdndxEz+VTtSekq7gKR14F6fwIRZ1sTzEPziIsYh40gi4wBdjLz7z/6Pv1CP5XdgSEX82Ap7Sga+xAwt72J7gMHZGxLNGwAW+H5vxdg/bhLwkv+q1CtrgN6qAsR2/lJvPpGGsw/GU0sez3bDSiKEEzTmsqWC/j7URca3zQt0RK3O3VX6bZ9MIDpfV0VWVwQV+GeN4UcH+EQ40Ai7aptoUzcNoSmm0EXBEPMaRivYlOJpSmjcwuOhHOb2q6C2sbwQcEVfk1KqixWg1Ai46U8O7IqU0LfkGAf+GxxW9C7By6h+VA6RTJZ3G5AJiNk1gN67iPZx/s1+w/GGYU9E7jC/xSs77DbXAKaVleB8fyJVKnalaVs7juFx3xMfkRHoqP7K6eorvW63Wy7qROYofML8PKIy3Wq1f6S+5vsV+3KvZ9A6+a//oN0D24gvcrtHsbET8PRC4wH/Gpor2Wzq+VIMEiFJjr5I3BDPpBU51FgUDgQv8L3yOa3Lh36kHchk8TQODC/yGPPLfTS8SJnAiIu68FnCBP5Pn/IK87WmDd3Tz953VvZRSOoCN2BURh6Zeaxd7g2R1L22Td5mnZzL8B1HMyQu2EmoUAAAAAElFTkSuQmCC') no-repeat;
+  background-position: right bottom;
+  height: 30px;
+  padding-right: 37px;
+  -webkit-transform:rotate(-3deg);
+  transform:rotate(-3deg);
+}
+.tip span {
+  color: #666;
+  font-size: .8em;
+  font-weight: 100;
+}
+.example label {
+  float: left;
+  width: 240px;
+}
+.example .mytextarea {
+  height: 160px;
+}
+.instructions pre {
+  display: block;
+}
+table { 
+  margin: 0 0 50px;
+  width: 100%;
+}
+table tr td:first-child {
+  width: 200px;
+  font-weight: 600;
+}
+table tr td {
+  padding: 8px 10px;
+  border-bottom: 1px #ccc solid;
+  vertical-align: top;
+}
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    width: 100%;
+  }
+  .bar .wrapper {
+    text-align: center;
+    padding: 30px 0;
+  }
+  .socials {
+    display: none;
+  }
+  .example label {
+    float: left;
+    width: 140px;
+  }
+  table tr td:first-child {
+    width: 140px;
+  }
+}

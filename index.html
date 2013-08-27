@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Fullscreen Editor</title>
+  <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+  <meta name="author" content="Burak Son">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet"  href="fontawesome/font-awesome.min.css" type="text/css" media="all" />
+  <link rel="stylesheet"  href="css/example.css" type="text/css" media="all" />
+  <link rel="stylesheet"  href="fseditor.css" type="text/css" media="all" />
+</head>
+<body>
+
+  <a href="https://github.com/burakson/fseditor"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+  <section class="header">
+    <div class="wrapper">
+      <h1>jQuery Fullscreen Editor</h1>
+      <h2>Lightweight jQuery plugin that adds fullscreen mode to text fields.</h2>
+    </div>
+  </section>
+
+  <section class="bar">
+    <div class="wrapper">
+      <div class="socials">
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fburakson.github.io%2Ffseditor%2F&amp;width=85&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;send=false&amp;appId=472256632831927" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:20px;" allowTransparency="true"></iframe>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="jQuery Fullscreen Editor" data-url="http://burakson.github.io/fseditor/" data-lang="en" data-via="burakson">Tweet</a>
+      </div>
+      <a href="https://github.com/burakson/fseditor/archive/master.zip" class="download-btn" target="_blank">
+        <i class="icon-download-alt"></i>
+        Download
+      </a>
+      <a href="https://github.com/burakson/fseditor" class="github-link">
+        <i class="icon-github"></i>
+        View project on Github
+      </a>
+    </div>
+  </section>
+
+  <section class="wrapper">
+    <div class="clearfix">
+      <div class="key-features">
+        <h3>Key features</h3>
+        <ul>
+          <li>Flexible fullscreen mode</li>
+          <li>Works on mobile - and major desktop browsers</li>
+          <li>Comes with two different transitions</li>
+          <li>Only ~4kb (minified)</li>
+        </ul>
+      </div>
+      <h3 style="margin-top: 20px">What is it?</h3>
+      <p><strong>jQuery Fullscreen Editor</strong> plugin transforms textfields to customizable editors, either it can be used within a form or standalone.</p>
+      <p>To activate the plugin, just add the following snippet into your document;</p>
+      <pre>$(".mytextarea").fseditor();</pre>
+
+    </div>
+
+    <h3>Example</h3> 
+    <div class="example clearfix">
+      <span class="tip">
+        Go Fullscreen!
+      </span>
+      <label>Your message</label>
+      <textarea class="mytextarea"></textarea>
+    </div>
+
+    <div class="instructions">
+    <h3>Instructions</h3>
+      <p>Download and extract the <a href="https://github.com/burakson/fseditor/archive/master.zip" target="_blank">zip</a> file to your desired project folder. Then in your document, first include fseditor.css right before &gt;head&lt; tag,  </p>
+      <pre>&lt;link rel="stylesheet" href="fseditor.css" type="text/css" media="all"&gt;</pre>
+      <p>Then include jQuery +1.8 and minimized version of fseditor's core javascript file;</p>
+      <pre>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.fseditor.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(".mytextarea").fseditor();
+&lt;/script&gt;</pre>
+
+      <p>That's it! Now the magic will happen.</p>
+
+    </div>
+
+    <h3>Options</h3>
+    <table>
+      <tr>
+        <td>overlay</td>
+        <td>Whether show semi-transparent overlay behind the editor in fullscreen mode. <i><small>(true/false)</small></i></td>
+      </tr>
+      <tr>
+        <td>placeholder</td>
+        <td>Show placeholder on the editor. <i><small>(string)</small></i></td>
+      </tr>
+      <tr>
+        <td>transition</td>
+        <td>The transition effect while switching fullscreen mode, by default it is 'fade'.<br><i><small>('fade', 'slide-in')</small></i></td>
+      </tr>
+      <tr>
+        <td>expandOnFocus</td>
+        <td>When set to <strong>true</strong>, the fullscreen mode will be triggered on focus. <i><small>(true/false)</small></i></td>
+      </tr>
+      <tr>
+        <td>maxWidth</td>
+        <td>Maximum width for fullscreen editor. <i><small>(number)</small></i></td>
+      </tr>
+      <tr>
+        <td>maxHeight</td>
+        <td>Maximum height for fullscreen editor. <i><small>(number)</small></i></td>
+      </tr>
+      <tr>
+        <td>onExpand</td>
+        <td>Expand event will be triggered when editor the goes to fullscreen mode. <i><small>(function)</small></i></td>
+      </tr>
+      <tr>
+        <td>onMinimize</td>
+        <td>Minimize event will be triggered when the editor goes to inline mode. <i><small>(function)</small></i></td>
+      </tr>
+    </table>
+
+    </table>
+    
+    <h3>Public Methods</h3>
+    <p>To trigger a public method of the plugin, you can simply call;</p>
+    <pre style="display: block;">$('#fseditor').fseditor('<i>method</i>');</pre>
+    <table>
+      <tr>
+        <td>expand</td>
+        <td>Triggers fullscreen mode.</td>
+      </tr>
+      <tr>
+        <td>minimize</td>
+        <td>Minimize the fullscreen mode. (unless it's not expanded)</td>
+      </tr>
+      <tr>
+        <td>destroy</td>
+        <td>Removes the plugin completely and brings the native textfield back.</td>
+      </tr>
+    </table>
+
+    <h3>Credits</h3>
+    This plugin was created by <strong>Burak Son</strong> (<a href="http://twitter.com/burakson" target="_blank">@burakson</a>). Feel free to open a ticket on <a href="https://github.com/burakson/fseditor/issues" target="_blank">issue tracker</a> regarding any ideas/bug report. Contribution would also be appreciated!
+
+  </section><!-- /main -->
+
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="example.js"></script>
+  <script src="jquery.fseditor.js"></script>
+  <script>
+  $(function() {
+    $(".mytextarea").fseditor({
+      placeholder: 'This is a placeholder text',
+      transition: 'fade',
+      overlay: true,
+      maxWidth: 1020,
+      maxHeight: 450
+    });
+  });
+  </script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  </script>
+</body>
+</html>
