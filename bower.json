@@ -1,0 +1,19 @@
+{
+  "name": "fseditor",
+  "version": "1.0.0",
+  "homepage": "https://github.com/burakson/fseditor",
+  "authors": [
+    "burakson <hello@burakson.com>"
+  ],
+  "description": "jQuery Fullscreen Editor",
+  "main": "jquery.fseditor.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
